@@ -35,5 +35,5 @@
     padding-right: 2px;
     padding-top: 0;
     padding-bottom: 0;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/Thaleah_PixelFont/Materials/ThaleahFat_TTF%20SDF.asset?fileID=11400000&guid=763be456a573163449eef7b097b6b29c&type=2#ThaleahFat_TTF SDF');
+    -unity-font-definition: url("project://database/Assets/_Game/UI/PIXEARG_.TTF?fileID=12800000&guid=18973f24c198ef44db6c10cd59da6aff&type=3#PIXEARG_");
 }

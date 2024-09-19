@@ -187,6 +187,22 @@ namespace PGIA
                 if (CurrentPointerPos.y > Screen.height) CurrentPointerPos.y = Screen.height;
                 return;
             }
+            
+            var touch = device as Touchscreen;
+            if (touch != null)
+            {
+                var primaryTouch = touch.primaryTouch;
+                if (primaryTouch.isInProgress)
+                {
+                    var pos = primaryTouch.position.ReadValue();
+                    float posX = pos.x;
+                    float posY = Screen.height - pos.y;
+                    var pointerPos = new Vector2(posX, posY);
+                    pointerPos = RuntimePanelUtils.ScreenToPanel(DocRoot.rootVisualElement.panel, pointerPos);
+                    SetCursorPosition(pointerPos);
+                }
+            }
+            
         }
 
 #endregion
